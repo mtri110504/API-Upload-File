@@ -1,0 +1,12 @@
+services:
+  web:
+    build: .
+    ports:
+      - "8082:80"
+    restart: always
+
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+    restart: always
